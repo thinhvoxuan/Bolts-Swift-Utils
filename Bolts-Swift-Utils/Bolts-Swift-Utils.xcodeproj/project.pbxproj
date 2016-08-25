@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		147C84AF1D6EEE2A00CDCC8C /* FacebookUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147C84AE1D6EEE2A00CDCC8C /* FacebookUtils.swift */; };
+		147C84B31D6EFB8B00CDCC8C /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147C84B21D6EFB8B00CDCC8C /* FacebookViewController.swift */; };
 		1498C49B1D6EEBBE009AC618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498C49A1D6EEBBE009AC618 /* AppDelegate.swift */; };
-		1498C49D1D6EEBBE009AC618 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498C49C1D6EEBBE009AC618 /* ViewController.swift */; };
 		1498C4A01D6EEBBE009AC618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1498C49E1D6EEBBE009AC618 /* Main.storyboard */; };
 		1498C4A21D6EEBBE009AC618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1498C4A11D6EEBBE009AC618 /* Assets.xcassets */; };
 		1498C4A51D6EEBBE009AC618 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1498C4A31D6EEBBE009AC618 /* LaunchScreen.storyboard */; };
@@ -40,9 +40,9 @@
 /* Begin PBXFileReference section */
 		098D1E47D934992A4D5E2871 /* Pods-Bolts-Swift-Utils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bolts-Swift-Utils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bolts-Swift-Utils/Pods-Bolts-Swift-Utils.debug.xcconfig"; sourceTree = "<group>"; };
 		147C84AE1D6EEE2A00CDCC8C /* FacebookUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookUtils.swift; path = Utils/FacebookUtils.swift; sourceTree = "<group>"; };
+		147C84B21D6EFB8B00CDCC8C /* FacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookViewController.swift; path = ViewController/FacebookViewController.swift; sourceTree = "<group>"; };
 		1498C4971D6EEBBE009AC618 /* Bolts-Swift-Utils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bolts-Swift-Utils.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1498C49A1D6EEBBE009AC618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1498C49C1D6EEBBE009AC618 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1498C49F1D6EEBBE009AC618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1498C4A11D6EEBBE009AC618 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1498C4A41D6EEBBE009AC618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +99,14 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		147C84B11D6EFB6A00CDCC8C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				147C84B21D6EFB8B00CDCC8C /* FacebookViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		1498C48E1D6EEBBE009AC618 = {
 			isa = PBXGroup;
 			children = (
@@ -124,9 +132,9 @@
 		1498C4991D6EEBBE009AC618 /* Bolts-Swift-Utils */ = {
 			isa = PBXGroup;
 			children = (
+				147C84B11D6EFB6A00CDCC8C /* ViewController */,
 				147C84B01D6EEE3000CDCC8C /* Utils */,
 				1498C49A1D6EEBBE009AC618 /* AppDelegate.swift */,
-				1498C49C1D6EEBBE009AC618 /* ViewController.swift */,
 				1498C49E1D6EEBBE009AC618 /* Main.storyboard */,
 				1498C4A11D6EEBBE009AC618 /* Assets.xcassets */,
 				1498C4A31D6EEBBE009AC618 /* LaunchScreen.storyboard */,
@@ -454,7 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1498C49D1D6EEBBE009AC618 /* ViewController.swift in Sources */,
+				147C84B31D6EFB8B00CDCC8C /* FacebookViewController.swift in Sources */,
 				147C84AF1D6EEE2A00CDCC8C /* FacebookUtils.swift in Sources */,
 				1498C49B1D6EEBBE009AC618 /* AppDelegate.swift in Sources */,
 			);
