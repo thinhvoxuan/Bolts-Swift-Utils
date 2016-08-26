@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140A1E1F1D7027520003F2A3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E1E1D7027520003F2A3 /* Config.swift */; };
+		140A1E221D7027B00003F2A3 /* NetwokingBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E211D7027B00003F2A3 /* NetwokingBase.swift */; };
+		140A1E231D7028B70003F2A3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E1E1D7027520003F2A3 /* Config.swift */; };
+		140A1E241D702AE00003F2A3 /* NetwokingBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E211D7027B00003F2A3 /* NetwokingBase.swift */; };
 		147C84AF1D6EEE2A00CDCC8C /* FacebookUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147C84AE1D6EEE2A00CDCC8C /* FacebookUtils.swift */; };
 		147C84B31D6EFB8B00CDCC8C /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147C84B21D6EFB8B00CDCC8C /* FacebookViewController.swift */; };
 		1498C49B1D6EEBBE009AC618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498C49A1D6EEBBE009AC618 /* AppDelegate.swift */; };
@@ -46,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		098D1E47D934992A4D5E2871 /* Pods-Bolts-Swift-Utils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bolts-Swift-Utils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bolts-Swift-Utils/Pods-Bolts-Swift-Utils.debug.xcconfig"; sourceTree = "<group>"; };
+		140A1E1E1D7027520003F2A3 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Model/Config.swift; sourceTree = "<group>"; };
+		140A1E211D7027B00003F2A3 /* NetwokingBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetwokingBase.swift; path = Base/NetwokingBase.swift; sourceTree = "<group>"; };
 		147C84AE1D6EEE2A00CDCC8C /* FacebookUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookUtils.swift; path = Utils/FacebookUtils.swift; sourceTree = "<group>"; };
 		147C84B21D6EFB8B00CDCC8C /* FacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookViewController.swift; path = ViewController/FacebookViewController.swift; sourceTree = "<group>"; };
 		1498C4971D6EEBBE009AC618 /* Bolts-Swift-Utils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bolts-Swift-Utils.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140A1E201D7027900003F2A3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				140A1E211D7027B00003F2A3 /* NetwokingBase.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		147C84B01D6EEE3000CDCC8C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,9 +160,10 @@
 		1498C4991D6EEBBE009AC618 /* Bolts-Swift-Utils */ = {
 			isa = PBXGroup;
 			children = (
+				140A1E201D7027900003F2A3 /* Base */,
 				14ECB7F01D6FE8D500A59889 /* Model */,
-				147C84B11D6EFB6A00CDCC8C /* ViewController */,
 				147C84B01D6EEE3000CDCC8C /* Utils */,
+				147C84B11D6EFB6A00CDCC8C /* ViewController */,
 				1498C49A1D6EEBBE009AC618 /* AppDelegate.swift */,
 				1498C49E1D6EEBBE009AC618 /* Main.storyboard */,
 				1498C4A11D6EEBBE009AC618 /* Assets.xcassets */,
@@ -180,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				14D3A37A1D6FEDE5002FF46D /* Weather.swift */,
+				140A1E1E1D7027520003F2A3 /* Config.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -503,7 +519,9 @@
 				14ECB7EF1D6FE89500A59889 /* ModelUtils.swift in Sources */,
 				14ECB7EC1D6FDF2100A59889 /* NetworkingUtils.swift in Sources */,
 				147C84AF1D6EEE2A00CDCC8C /* FacebookUtils.swift in Sources */,
+				140A1E221D7027B00003F2A3 /* NetwokingBase.swift in Sources */,
 				14D3A37B1D6FEDE5002FF46D /* Weather.swift in Sources */,
+				140A1E1F1D7027520003F2A3 /* Config.swift in Sources */,
 				14E2D9841D702065009A128F /* NetworkViewController.swift in Sources */,
 				1498C49B1D6EEBBE009AC618 /* AppDelegate.swift in Sources */,
 			);
@@ -514,7 +532,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1498C4B01D6EEBBE009AC618 /* Bolts_Swift_UtilsTests.swift in Sources */,
+				140A1E241D702AE00003F2A3 /* NetwokingBase.swift in Sources */,
 				14D3A37D1D6FF490002FF46D /* ModelUtils.swift in Sources */,
+				140A1E231D7028B70003F2A3 /* Config.swift in Sources */,
 				14D3A37C1D6FF37A002FF46D /* Weather.swift in Sources */,
 				14ECB7ED1D6FE71500A59889 /* NetworkingUtils.swift in Sources */,
 			);

@@ -10,44 +10,39 @@ import UIKit
 import BoltsSwift
 import Alamofire
 
-class NetworkingUtils {
+class NetworkingUtils: NetwokingBase {
+
     static let shareInstance = NetworkingUtils()
     let modelUtils = ModelUtils.shareInstance
+
     struct ROUTE {
         static let ROOT = "https://raw.githubusercontent.com/voxuanthinh/Bolts-Swift-Utils/master/Server/"
-        static let WEATHER = ROUTE.ROOT + "weather.json"
-        static let WEATHERERROR = ROUTE.ROOT + "weatherError.json"
-        static let WRONGURL = ROUTE.ROOT + "NotFoundURL.json"
+        static let Weather = ROUTE.ROOT + "weather.json"
+        static let WeatherError = ROUTE.ROOT + "weatherError.json"
+        static let WrongUrl = ROUTE.ROOT + "NotFoundURL.json"
+        static let Config = ROUTE.ROOT + "config.json"
     }
 
     func fetchWeatherInformation() -> Task<Weather> {
-        return fetchRequest(ROUTE.WEATHER)
+        return self.fetchRequest(ROUTE.Weather)
             .continueOnSuccessWithTask(continuation: modelUtils.parseWeatherModel)
     }
 
 
     func fetchWeatherError() -> Task<Weather> {
-        return fetchRequest(ROUTE.WEATHERERROR)
+        return fetchRequest(ROUTE.WeatherError)
             .continueOnSuccessWithTask(continuation: modelUtils.parseWeatherModel)
     }
 
     func fetchWeatherErrorFromNetwork() -> Task<Weather> {
-        return fetchRequest(ROUTE.WRONGURL)
+        return fetchRequest(ROUTE.WrongUrl)
             .continueOnSuccessWithTask(continuation: modelUtils.parseWeatherModel)
     }
 
-    func fetchRequest(url: String) -> Task<AnyObject> {
-        let task = TaskCompletionSource<AnyObject>()
-        Alamofire.request(.GET, url).responseJSON { response in
-            switch response.result {
-            case .Success(let value):
-                task.set(result: value)
-            case .Failure(let error):
-                task.set(error: error)
-            }
-        }
-        return task.task
-    }
 
+    func fetchConfig() -> Task<Config> {
+        return fetchRequest(ROUTE.Config)
+            .continueOnSuccessWithTask(continuation: modelUtils.parseConfigModel)
+    }
 
 }

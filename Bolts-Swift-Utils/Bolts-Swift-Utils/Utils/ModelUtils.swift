@@ -18,4 +18,11 @@ class ModelUtils {
         task.set(result: weatherInfor)
         return task.task
     }
+
+    func parseConfigModel(anyObject: AnyObject) -> Task<Config> {
+        let task = TaskCompletionSource<Config>()
+        let config = Config(dictionary: (anyObject as? NSDictionary)!)
+        task.set(result: config)
+        return task.task
+    }
 }
