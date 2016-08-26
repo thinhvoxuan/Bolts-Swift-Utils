@@ -4,16 +4,20 @@
 target 'Bolts-Swift-Utils' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Bolts-Swift'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'Bolts-Swift'
   pod 'Alamofire', '~> 3.4'
+  pod 'EVReflection'
 
   # Pods for Bolts-Swift-Utils
 
   target 'Bolts-Swift-UtilsTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Bolts-Swift'
+    pod 'EVReflection'
+    pod 'Alamofire', '~> 3.4'
   end
 
   target 'Bolts-Swift-UtilsUITests' do

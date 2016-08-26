@@ -7,29 +7,34 @@
 //
 
 import XCTest
+import BoltsSwift
+import EVReflection
 @testable import Bolts_Swift_Utils
 
 class BoltsSwiftUtilsTests: XCTestCase {
 
+    let networking = NetworkingUtils.shareInstance
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        EVReflection.setBundleIdentifier(Weather)
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
 
-    func testExample() {
+    func testWeather() {
+        let ex = expectationWithDescription("Weather Response")
+        var resultTask: Task<Weather>? = nil
 
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+        networking.fetchWeatherInformation().continueWith { task in
+            resultTask = task
+            ex.fulfill()
         }
+
+        waitForExpectationsWithTimeout(5, handler: nil)
+        XCTAssertNotNil(resultTask, "Weather result must not nil")
+        XCTAssertNotNil(resultTask!.result, "Weather result must not nil")
     }
 
 }

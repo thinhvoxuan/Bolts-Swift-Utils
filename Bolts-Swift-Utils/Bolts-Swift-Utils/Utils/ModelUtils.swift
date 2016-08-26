@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import BoltsSwift
 
-enum CharacterTypes {
-    case Ninja
-    case Prirate
-}
+class ModelUtils {
+    static let shareInstance = ModelUtils()
 
-class ModelUtils: NSObject {
-
+    func parseWeatherModel(anyObject: AnyObject) -> Task<Weather> {
+        let task = TaskCompletionSource<Weather>()
+        let weatherInfor = Weather(dictionary: (anyObject as? NSDictionary)!)
+        task.set(result: weatherInfor)
+        return task.task
+    }
 }

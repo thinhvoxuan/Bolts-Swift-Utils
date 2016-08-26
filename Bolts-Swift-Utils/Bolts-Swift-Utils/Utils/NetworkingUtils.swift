@@ -12,13 +12,18 @@ import Alamofire
 
 class NetworkingUtils {
     static let shareInstance = NetworkingUtils()
+    let modelUtils = ModelUtils.shareInstance
     struct ROUTE {
         static let ROOT = "https://raw.githubusercontent.com/voxuanthinh/Bolts-Swift-Utils/master/Server/"
         static let WEATHER = ROUTE.ROOT + "weather.json"
     }
 
+    func fetchWeatherInformation() -> Task<Weather> {
+        return requestWeather()
+            .continueOnSuccessWithTask(continuation: modelUtils.parseWeatherModel)
+    }
 
-    func fetchWeatherInformation() -> Task<AnyObject> {
+    func requestWeather() -> Task<AnyObject> {
         let task = TaskCompletionSource<AnyObject>()
         Alamofire.request(.GET, ROUTE.WEATHER).responseJSON { response in
             switch response.result {
