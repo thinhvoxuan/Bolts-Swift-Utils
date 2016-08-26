@@ -15,6 +15,13 @@ class Config: EVObject {
     var store: MultiLanguages = MultiLanguages()
     var android: String = "0.0.0"
     var ios: String = "0.0.0"
+
+    func isNeedUpdate() -> Bool {
+        let appVersion = UIApplication.sharedApplication().appVersion!
+        let currentVersion = Version(appVersion)
+        let storeVersion = Version(self.ios)
+        return currentVersion < storeVersion
+    }
 }
 
 class MultiLanguages: EVObject {

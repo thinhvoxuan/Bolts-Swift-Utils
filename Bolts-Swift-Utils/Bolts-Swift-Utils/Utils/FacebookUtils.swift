@@ -9,6 +9,7 @@
 import UIKit
 import BoltsSwift
 import FBSDKLoginKit
+import SwiftyUserDefaults
 
 struct FacebookResponse {
     var accessToken: FBSDKAccessToken
@@ -53,4 +54,10 @@ class FacebookUtils {
         })
         return task.task
     }
+
+    func saveFacebookToken(token: FBSDKAccessToken) {
+        Defaults[.userfbID] = token.userID
+        Defaults[.userfbToken] = token.tokenString
+    }
+
 }

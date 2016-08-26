@@ -11,9 +11,22 @@ import BoltsSwift
 import Alamofire
 
 class NetwokingBase: NSObject {
-    func fetchRequest(url: String) -> Task<AnyObject> {
+    func fetchRequest(url: String, params: [String: String] = [:]) -> Task<AnyObject> {
         let task = TaskCompletionSource<AnyObject>()
-        Alamofire.request(.GET, url).responseJSON { response in
+        Alamofire.request(.GET, url, parameters: params).responseJSON { response in
+            switch response.result {
+            case .Success(let value):
+                task.set(result: value)
+            case .Failure(let error):
+                task.set(error: error)
+            }
+        }
+        return task.task
+    }
+
+    func postRequest(url: String, params: [String: String] = [:], header: [String:String]=[:]) -> Task<AnyObject> {
+        let task = TaskCompletionSource<AnyObject>()
+        Alamofire.request(.POST, url, parameters: params, encoding: .JSON, headers: header).responseJSON { response in
             switch response.result {
             case .Success(let value):
                 task.set(result: value)

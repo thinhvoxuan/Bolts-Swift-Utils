@@ -9,6 +9,8 @@ target 'Bolts-Swift-Utils' do
   pod 'Bolts-Swift'
   pod 'Alamofire', '~> 3.4'
   pod 'EVReflection'
+  pod 'Version', :git => 'https://github.com/voxuanthinh/Version-iOS'
+  pod 'SwiftyUserDefaults'
 
   # Pods for Bolts-Swift-Utils
 
@@ -18,6 +20,7 @@ target 'Bolts-Swift-Utils' do
     pod 'Bolts-Swift'
     pod 'EVReflection'
     pod 'Alamofire', '~> 3.4'
+    pod 'SwiftyUserDefaults'
   end
 
   target 'Bolts-Swift-UtilsUITests' do
