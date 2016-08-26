@@ -12,14 +12,14 @@ class FacebookViewController: UIViewController {
     @IBAction func loginAction(sender: UIButton) {
         FacebookUtils.sharedInstance.loginAndFetchProfile(self).continueWith {
             task in
-            if (task.error != nil) {
+            if task.error != nil {
                 if let error = task.error as NSError? {
                     print(error.localizedDescription)
                     return
                 }
-            }else {
+            } else {
                 print("\(task.result?.accessToken)")
-                print("\(task.result?.me)")
+                print("\(task.result?.meInfor)")
             }
         }
     }

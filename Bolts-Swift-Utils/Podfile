@@ -6,7 +6,8 @@ target 'Bolts-Swift-Utils' do
   use_frameworks!
   pod 'Bolts-Swift'
   pod 'FBSDKCoreKit'
-  pod 'FBSDKLoginKit' 
+  pod 'FBSDKLoginKit'
+  pod 'Alamofire', '~> 3.4'
 
   # Pods for Bolts-Swift-Utils
 
