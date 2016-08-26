@@ -1,7 +1,7 @@
 
 {
     "location": "Toronto, Canada",
-    "three_day_forecast": [
+    "threeDayForecast": [
         {
             "conditions": "Partly cloudy",
             "day" : "Monday",
