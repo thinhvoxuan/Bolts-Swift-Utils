@@ -16,24 +16,32 @@ class NetworkingUtils {
     struct ROUTE {
         static let ROOT = "https://raw.githubusercontent.com/voxuanthinh/Bolts-Swift-Utils/master/Server/"
         static let WEATHER = ROUTE.ROOT + "weather.json"
+        static let WEATHERERROR = ROUTE.ROOT + "weatherError.json"
     }
 
     func fetchWeatherInformation() -> Task<Weather> {
-        return requestWeather()
+        return fetchRequest(ROUTE.WEATHER)
             .continueOnSuccessWithTask(continuation: modelUtils.parseWeatherModel)
     }
 
-    func requestWeather() -> Task<AnyObject> {
+
+    func fetchWeatherError() -> Task<Weather> {
+        return fetchRequest(ROUTE.WEATHERERROR)
+            .continueOnSuccessWithTask(continuation: modelUtils.parseWeatherModel)
+    }
+
+    func fetchRequest(url: String) -> Task<AnyObject> {
         let task = TaskCompletionSource<AnyObject>()
-        Alamofire.request(.GET, ROUTE.WEATHER).responseJSON { response in
+        Alamofire.request(.GET, url).responseJSON { response in
             switch response.result {
             case .Success(let value):
-                    task.set(result: value)
+                task.set(result: value)
             case .Failure(let error):
                 task.set(error: error)
             }
         }
         return task.task
     }
+
 
 }

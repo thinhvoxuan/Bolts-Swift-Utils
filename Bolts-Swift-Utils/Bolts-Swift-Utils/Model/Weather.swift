@@ -10,10 +10,12 @@ import UIKit
 import EVReflection
 
 class Weather: EVObject {
+    var code: Int = 200
+    var message: String = ""
     var location: String = ""
     var threeDayForecast: [DailyRecord] = [DailyRecord]()
     override func propertyMapping() -> [(String?, String?)] {
-        return [("threeDayForecast", "three_day_forecast")]
+        return [("threeDayForecast", "three_day_forecast"), ("code", "status_code")]
     }
 }
 

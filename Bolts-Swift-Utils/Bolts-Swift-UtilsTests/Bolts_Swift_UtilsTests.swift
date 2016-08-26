@@ -37,4 +37,17 @@ class BoltsSwiftUtilsTests: XCTestCase {
         XCTAssertNotNil(resultTask!.result, "Weather result must not nil")
     }
 
+    func testWeatherError() {
+        let ex = expectationWithDescription("Weather Error Reponse")
+        var resultTask: Task<Weather>? = nil
+        networking.fetchWeatherError().continueWith { task in
+            resultTask = task
+            ex.fulfill()
+        }
+        waitForExpectationsWithTimeout(5, handler: nil)
+        XCTAssertNotNil(resultTask, "Weather result must not nil")
+        XCTAssertNotNil(resultTask!.result, "Weather result must not nil")
+        XCTAssertEqual(resultTask!.result!.code, 401)
+    }
+
 }
