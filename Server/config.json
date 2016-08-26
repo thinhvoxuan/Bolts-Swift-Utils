@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "home": {
+    "en": "http://thinhvoxuan.me/?view=apps",
+    "vi": "http://thinhvoxuan.me/?view=apps"
+  },
+  "store": {
+    "en": "http://thinhvoxuan.me/pages/our-stores-mobile-apps",
+    "vi": "http://thinhvoxuan.me/pages/our-stores-mobile-apps"
+  },
+  "app_info_url": {
+    "en": "http://www.thinhvoxuan.me",
+    "vi": "http://www.thinhvoxuan.me"
+  },
+  "privacy_info_url": {
+    "en": "http://thinhvoxuan.me/pages/dieu-khoan-bao-mat",
+    "vi": "http://thinhvoxuan.me/pages/dieu-khoan-bao-mat"
+  },
+  "tos_info_url": {
+    "en": "",
+    "vi": ""
+  },
+  "android": "1.0.0.2",
+  "ios": "1.1.4"
+}
