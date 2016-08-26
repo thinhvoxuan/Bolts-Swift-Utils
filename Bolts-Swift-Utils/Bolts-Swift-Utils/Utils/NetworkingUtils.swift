@@ -17,6 +17,7 @@ class NetworkingUtils {
         static let ROOT = "https://raw.githubusercontent.com/voxuanthinh/Bolts-Swift-Utils/master/Server/"
         static let WEATHER = ROUTE.ROOT + "weather.json"
         static let WEATHERERROR = ROUTE.ROOT + "weatherError.json"
+        static let WRONGURL = ROUTE.ROOT + "NotFoundURL.json"
     }
 
     func fetchWeatherInformation() -> Task<Weather> {
@@ -27,6 +28,11 @@ class NetworkingUtils {
 
     func fetchWeatherError() -> Task<Weather> {
         return fetchRequest(ROUTE.WEATHERERROR)
+            .continueOnSuccessWithTask(continuation: modelUtils.parseWeatherModel)
+    }
+
+    func fetchWeatherErrorFromNetwork() -> Task<Weather> {
+        return fetchRequest(ROUTE.WRONGURL)
             .continueOnSuccessWithTask(continuation: modelUtils.parseWeatherModel)
     }
 
