@@ -9,5 +9,5 @@
 import UIKit
 import EVReflection
 class UserToken: EVObject {
-    var token : String = ""
+    var token: String = ""
 }

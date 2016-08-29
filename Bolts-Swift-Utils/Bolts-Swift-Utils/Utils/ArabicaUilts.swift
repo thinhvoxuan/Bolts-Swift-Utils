@@ -14,9 +14,11 @@ class ArabicaUilts: NetwokingBase {
     let model = ModelUtils.shareInstance
 
     struct ROUTE {
-        static let ROOT = "http://xxxxxx/api"
+        static let ROOT = "http://api.thecoffeehouse.vn/api"
         static let config = ROUTE.ROOT + "/config"
-        static let signup = ROUTE.ROOT + "/config"
+        static let signup = ROUTE.ROOT + "/signup"
+        static let signin = ROUTE.ROOT + "/login"
+        static let profile = ROUTE.ROOT + "/profile"
     }
 
     func fetchConfig() -> Task<Config> {
@@ -35,9 +37,8 @@ class ArabicaUilts: NetwokingBase {
         }
         facebookInformation["birthday"] = ""
         if let birthdayValue =  fbResponse.meInfor["birthday"] as? String {
-            let nsDateObject = TransformUtils.parseDate(birthdayValue, format: "MM/dd/yyyy")
-            let stringDate = TransformUtils.formatDate(nsDateObject, format: "yyyy/MM/dd")
-            facebookInformation["birthday"] = stringDate
+            let reFormatBirthdayValue = TransformUtils.changeFormatDate(birthdayValue, fromFormat: "MM/dd/yyyy", toFormat: "yyyy/MM/dd")
+            facebookInformation["birthday"] = reFormatBirthdayValue
         }
         facebookInformation["avatar"] = "https://graph.facebook.com/\(fbResponse.accessToken.userID)/picture?type=large&width=200&height=200"
         return facebookInformation
@@ -45,7 +46,25 @@ class ArabicaUilts: NetwokingBase {
 
     func signupWithFacebook(fbResponse: FacebookResponse) -> Task<UserToken> {
         let postData = buildSignupData(fbResponse)
+        return self.signUpWithData(postData)
+    }
+
+    func signUpWithData(postData: [String: String]) -> Task<UserToken> {
         return postRequest(ROUTE.signup, params: postData)
             .continueOnSuccessWithTask(continuation: model.parseTokenModel)
+    }
+
+    func signInWithData(postData: [String:String]) -> Task<UserToken> {
+        return postRequest(ROUTE.signin, params: postData)
+            .continueOnSuccessWithTask(continuation: model.parseTokenModel)
+    }
+
+    func loadProfile(token: UserToken) -> Task<UserInformation> {
+        let headers = [
+            "Authorization" : "Bearer \(token.token)",
+            "Accept-Language": "vi"
+        ]
+        return fetchRequest(ROUTE.profile, header: headers)
+            .continueOnSuccessWithTask(continuation: model.parseUserInformation)
     }
 }

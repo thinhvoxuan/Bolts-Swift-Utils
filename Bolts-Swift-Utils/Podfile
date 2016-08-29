@@ -17,6 +17,7 @@ target 'Bolts-Swift-Utils' do
   target 'Bolts-Swift-UtilsTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'FBSDKLoginKit'
     pod 'Bolts-Swift'
     pod 'EVReflection'
     pod 'Alamofire', '~> 3.4'

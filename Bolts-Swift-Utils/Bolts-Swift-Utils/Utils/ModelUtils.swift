@@ -25,10 +25,18 @@ class ModelUtils {
         task.set(result: config)
         return task.task
     }
+
     func parseTokenModel(anyObject: AnyObject) -> Task<UserToken> {
         let task = TaskCompletionSource<UserToken>()
         let token = UserToken(dictionary: (anyObject as? NSDictionary)!)
         task.set(result: token)
+        return task.task
+    }
+
+    func parseUserInformation(anyObject: AnyObject) -> Task<UserInformation> {
+        let task = TaskCompletionSource<UserInformation>()
+        let userInfor = UserInformation(dictionary: (anyObject as? NSDictionary)!)
+        task.set(result: userInfor)
         return task.task
     }
 }

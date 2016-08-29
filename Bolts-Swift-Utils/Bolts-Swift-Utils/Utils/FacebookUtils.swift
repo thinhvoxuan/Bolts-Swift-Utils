@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import SwiftyUserDefaults
 
 struct FacebookResponse {
-    var accessToken: FBSDKAccessToken
+    var accessToken: FacebookToken
     var meInfor: AnyObject
 }
 
@@ -48,16 +48,16 @@ class FacebookUtils {
             if error != nil {
                 task.set(error: error)
             } else {
-                task.set(result: FacebookResponse(accessToken: token, meInfor: bodyResult))
-
+                let fbToken = FacebookToken.initFromFBSDKAccessToken(token)
+                task.set(result: FacebookResponse(accessToken: fbToken, meInfor: bodyResult))
             }
         })
         return task.task
     }
 
     func saveFacebookToken(token: FBSDKAccessToken) {
-        Defaults[.userfbID] = token.userID
-        Defaults[.userfbToken] = token.tokenString
+//        Defaults[.userfbID] = token.userID
+//        Defaults[.userfbToken] = token.tokenString
     }
 
 }

@@ -18,14 +18,27 @@
 		144AF0821D7052CB005101FF /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144AF0811D7052CB005101FF /* UserConfig.swift */; };
 		144AF0841D705484005101FF /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144AF0831D705484005101FF /* UserToken.swift */; };
 		144AF0861D705576005101FF /* TransformUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144AF0851D705576005101FF /* TransformUtils.swift */; };
+		144AF0881D705743005101FF /* FacebookLoginFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144AF0871D705743005101FF /* FacebookLoginFlowTests.swift */; };
+		144AF0891D705944005101FF /* FacebookUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147C84AE1D6EEE2A00CDCC8C /* FacebookUtils.swift */; };
 		147C84AF1D6EEE2A00CDCC8C /* FacebookUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147C84AE1D6EEE2A00CDCC8C /* FacebookUtils.swift */; };
 		147C84B31D6EFB8B00CDCC8C /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147C84B21D6EFB8B00CDCC8C /* FacebookViewController.swift */; };
 		1498C49B1D6EEBBE009AC618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498C49A1D6EEBBE009AC618 /* AppDelegate.swift */; };
 		1498C4A01D6EEBBE009AC618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1498C49E1D6EEBBE009AC618 /* Main.storyboard */; };
 		1498C4A21D6EEBBE009AC618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1498C4A11D6EEBBE009AC618 /* Assets.xcassets */; };
 		1498C4A51D6EEBBE009AC618 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1498C4A31D6EEBBE009AC618 /* LaunchScreen.storyboard */; };
-		1498C4B01D6EEBBE009AC618 /* Bolts_Swift_UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498C4AF1D6EEBBE009AC618 /* Bolts_Swift_UtilsTests.swift */; };
 		1498C4BB1D6EEBBE009AC618 /* Bolts_Swift_UtilsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498C4BA1D6EEBBE009AC618 /* Bolts_Swift_UtilsUITests.swift */; };
+		14A1BEB41D730BC300579807 /* TransformUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A1BEB31D730BC300579807 /* TransformUtilsTests.swift */; };
+		14A1BEB51D730BD500579807 /* TransformUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144AF0851D705576005101FF /* TransformUtils.swift */; };
+		14A1BEB61D730C9600579807 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144AF0831D705484005101FF /* UserToken.swift */; };
+		14A1BEB81D730DFF00579807 /* LoadConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A1BEB71D730DFF00579807 /* LoadConfigTests.swift */; };
+		14A1BEB91D730F5100579807 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E2B1D703A9E0003F2A3 /* UIApplication.swift */; };
+		14A1BEBB1D73139F00579807 /* FacebookToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A1BEBA1D73139F00579807 /* FacebookToken.swift */; };
+		14A1BEBC1D73165200579807 /* FacebookToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A1BEBA1D73139F00579807 /* FacebookToken.swift */; };
+		14A1BEBE1D731B5900579807 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A1BEBD1D731B5900579807 /* MockData.swift */; };
+		14A1BEC01D733ED800579807 /* RegisterFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A1BEBF1D733ED800579807 /* RegisterFlowTests.swift */; };
+		14A1BEC21D73528C00579807 /* LoginAndProfileFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A1BEC11D73528C00579807 /* LoginAndProfileFlowTests.swift */; };
+		14A1BEC41D7352E600579807 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A1BEC31D7352E600579807 /* UserInformation.swift */; };
+		14A1BEC51D73577D00579807 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A1BEC31D7352E600579807 /* UserInformation.swift */; };
 		14D3A37B1D6FEDE5002FF46D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D3A37A1D6FEDE5002FF46D /* Weather.swift */; };
 		14D3A37C1D6FF37A002FF46D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D3A37A1D6FEDE5002FF46D /* Weather.swift */; };
 		14D3A37D1D6FF490002FF46D /* ModelUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECB7EE1D6FE89500A59889 /* ModelUtils.swift */; };
@@ -65,6 +78,7 @@
 		144AF0811D7052CB005101FF /* UserConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserConfig.swift; path = Model/UserConfig.swift; sourceTree = "<group>"; };
 		144AF0831D705484005101FF /* UserToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserToken.swift; path = Model/UserToken.swift; sourceTree = "<group>"; };
 		144AF0851D705576005101FF /* TransformUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransformUtils.swift; path = Utils/TransformUtils.swift; sourceTree = "<group>"; };
+		144AF0871D705743005101FF /* FacebookLoginFlowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginFlowTests.swift; sourceTree = "<group>"; };
 		147C84AE1D6EEE2A00CDCC8C /* FacebookUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookUtils.swift; path = Utils/FacebookUtils.swift; sourceTree = "<group>"; };
 		147C84B21D6EFB8B00CDCC8C /* FacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookViewController.swift; path = ViewController/FacebookViewController.swift; sourceTree = "<group>"; };
 		1498C4971D6EEBBE009AC618 /* Bolts-Swift-Utils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bolts-Swift-Utils.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,11 +88,17 @@
 		1498C4A41D6EEBBE009AC618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1498C4A61D6EEBBE009AC618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1498C4AB1D6EEBBE009AC618 /* Bolts-Swift-UtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bolts-Swift-UtilsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1498C4AF1D6EEBBE009AC618 /* Bolts_Swift_UtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bolts_Swift_UtilsTests.swift; sourceTree = "<group>"; };
 		1498C4B11D6EEBBE009AC618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1498C4B61D6EEBBE009AC618 /* Bolts-Swift-UtilsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bolts-Swift-UtilsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1498C4BA1D6EEBBE009AC618 /* Bolts_Swift_UtilsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bolts_Swift_UtilsUITests.swift; sourceTree = "<group>"; };
 		1498C4BC1D6EEBBE009AC618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14A1BEB31D730BC300579807 /* TransformUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformUtilsTests.swift; sourceTree = "<group>"; };
+		14A1BEB71D730DFF00579807 /* LoadConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadConfigTests.swift; sourceTree = "<group>"; };
+		14A1BEBA1D73139F00579807 /* FacebookToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookToken.swift; path = Model/FacebookToken.swift; sourceTree = "<group>"; };
+		14A1BEBD1D731B5900579807 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		14A1BEBF1D733ED800579807 /* RegisterFlowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterFlowTests.swift; sourceTree = "<group>"; };
+		14A1BEC11D73528C00579807 /* LoginAndProfileFlowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAndProfileFlowTests.swift; sourceTree = "<group>"; };
+		14A1BEC31D7352E600579807 /* UserInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInformation.swift; path = Model/UserInformation.swift; sourceTree = "<group>"; };
 		14D3A37A1D6FEDE5002FF46D /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = Model/Weather.swift; sourceTree = "<group>"; };
 		14E2D9831D702065009A128F /* NetworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkViewController.swift; path = ViewController/NetworkViewController.swift; sourceTree = "<group>"; };
 		14ECB7EB1D6FDF2100A59889 /* NetworkingUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingUtils.swift; path = Utils/NetworkingUtils.swift; sourceTree = "<group>"; };
@@ -200,8 +220,13 @@
 		1498C4AE1D6EEBBE009AC618 /* Bolts-Swift-UtilsTests */ = {
 			isa = PBXGroup;
 			children = (
-				1498C4AF1D6EEBBE009AC618 /* Bolts_Swift_UtilsTests.swift */,
+				14A1BEBD1D731B5900579807 /* MockData.swift */,
+				14A1BEB71D730DFF00579807 /* LoadConfigTests.swift */,
 				140A1E281D7036FF0003F2A3 /* ConfigLoadTests.swift */,
+				14A1BEB31D730BC300579807 /* TransformUtilsTests.swift */,
+				144AF0871D705743005101FF /* FacebookLoginFlowTests.swift */,
+				14A1BEBF1D733ED800579807 /* RegisterFlowTests.swift */,
+				14A1BEC11D73528C00579807 /* LoginAndProfileFlowTests.swift */,
 				1498C4B11D6EEBBE009AC618 /* Info.plist */,
 			);
 			path = "Bolts-Swift-UtilsTests";
@@ -223,6 +248,8 @@
 				140A1E1E1D7027520003F2A3 /* Config.swift */,
 				144AF0811D7052CB005101FF /* UserConfig.swift */,
 				144AF0831D705484005101FF /* UserToken.swift */,
+				14A1BEBA1D73139F00579807 /* FacebookToken.swift */,
+				14A1BEC31D7352E600579807 /* UserInformation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -547,6 +574,7 @@
 				14ECB7EC1D6FDF2100A59889 /* NetworkingUtils.swift in Sources */,
 				140A1E2C1D703A9E0003F2A3 /* UIApplication.swift in Sources */,
 				144AF0821D7052CB005101FF /* UserConfig.swift in Sources */,
+				14A1BEC41D7352E600579807 /* UserInformation.swift in Sources */,
 				140A1E261D70364E0003F2A3 /* ArabicaUilts.swift in Sources */,
 				144AF0861D705576005101FF /* TransformUtils.swift in Sources */,
 				147C84AF1D6EEE2A00CDCC8C /* FacebookUtils.swift in Sources */,
@@ -555,6 +583,7 @@
 				140A1E1F1D7027520003F2A3 /* Config.swift in Sources */,
 				14E2D9841D702065009A128F /* NetworkViewController.swift in Sources */,
 				1498C49B1D6EEBBE009AC618 /* AppDelegate.swift in Sources */,
+				14A1BEBB1D73139F00579807 /* FacebookToken.swift in Sources */,
 				144AF0841D705484005101FF /* UserToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,14 +592,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1498C4B01D6EEBBE009AC618 /* Bolts_Swift_UtilsTests.swift in Sources */,
+				144AF0881D705743005101FF /* FacebookLoginFlowTests.swift in Sources */,
+				14A1BEC01D733ED800579807 /* RegisterFlowTests.swift in Sources */,
+				14A1BEC51D73577D00579807 /* UserInformation.swift in Sources */,
 				140A1E291D7036FF0003F2A3 /* ConfigLoadTests.swift in Sources */,
+				14A1BEB41D730BC300579807 /* TransformUtilsTests.swift in Sources */,
 				140A1E241D702AE00003F2A3 /* NetwokingBase.swift in Sources */,
 				14D3A37D1D6FF490002FF46D /* ModelUtils.swift in Sources */,
+				144AF0891D705944005101FF /* FacebookUtils.swift in Sources */,
 				140A1E271D7036A60003F2A3 /* ArabicaUilts.swift in Sources */,
+				14A1BEB51D730BD500579807 /* TransformUtils.swift in Sources */,
+				14A1BEB91D730F5100579807 /* UIApplication.swift in Sources */,
+				14A1BEB81D730DFF00579807 /* LoadConfigTests.swift in Sources */,
+				14A1BEC21D73528C00579807 /* LoginAndProfileFlowTests.swift in Sources */,
 				140A1E231D7028B70003F2A3 /* Config.swift in Sources */,
 				14D3A37C1D6FF37A002FF46D /* Weather.swift in Sources */,
 				14ECB7ED1D6FE71500A59889 /* NetworkingUtils.swift in Sources */,
+				14A1BEBE1D731B5900579807 /* MockData.swift in Sources */,
+				14A1BEBC1D73165200579807 /* FacebookToken.swift in Sources */,
+				14A1BEB61D730C9600579807 /* UserToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

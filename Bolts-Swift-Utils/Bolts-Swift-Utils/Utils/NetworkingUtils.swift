@@ -38,11 +38,4 @@ class NetworkingUtils: NetwokingBase {
         return fetchRequest(ROUTE.WrongUrl)
             .continueOnSuccessWithTask(continuation: modelUtils.parseWeatherModel)
     }
-
-
-    func fetchConfig() -> Task<Config> {
-        return fetchRequest(ROUTE.Config)
-            .continueOnSuccessWithTask(continuation: modelUtils.parseConfigModel)
-    }
-
 }

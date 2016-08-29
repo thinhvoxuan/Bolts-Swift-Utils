@@ -9,11 +9,20 @@
 import UIKit
 
 class TransformUtils {
-    static func parseDate(dateStr: String, format: String="yyyy-MM-dd") -> NSDate {
+
+    static func changeFormatDate(fromDateString: String, fromFormat: String = "yyyy-MM-dd", toFormat: String = "yyyy-MM-dd") -> String {
+        let dateObject = self.parseDate(fromDateString, format: fromFormat)
+        if dateObject != nil {
+            return self.formatDate(dateObject!, format: toFormat)
+        }
+        return ""
+    }
+
+    static func parseDate(dateStr: String, format: String="yyyy-MM-dd") -> NSDate? {
         let dateFmt = NSDateFormatter()
         dateFmt.timeZone = NSTimeZone.defaultTimeZone()
         dateFmt.dateFormat = format
-        return dateFmt.dateFromString(dateStr)!
+        return dateFmt.dateFromString(dateStr)
     }
 
     static func formatDate(date: NSDate, format: String="yyyy-MM-dd") -> String {
