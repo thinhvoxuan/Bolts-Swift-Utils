@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		140A1E1F1D7027520003F2A3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E1E1D7027520003F2A3 /* Config.swift */; };
+		140A1E1F1D7027520003F2A3 /* ConfigApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E1E1D7027520003F2A3 /* ConfigApp.swift */; };
 		140A1E221D7027B00003F2A3 /* NetwokingBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E211D7027B00003F2A3 /* NetwokingBase.swift */; };
-		140A1E231D7028B70003F2A3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E1E1D7027520003F2A3 /* Config.swift */; };
+		140A1E231D7028B70003F2A3 /* ConfigApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E1E1D7027520003F2A3 /* ConfigApp.swift */; };
 		140A1E241D702AE00003F2A3 /* NetwokingBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E211D7027B00003F2A3 /* NetwokingBase.swift */; };
 		140A1E261D70364E0003F2A3 /* ArabicaUilts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E251D70364E0003F2A3 /* ArabicaUilts.swift */; };
 		140A1E271D7036A60003F2A3 /* ArabicaUilts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A1E251D70364E0003F2A3 /* ArabicaUilts.swift */; };
@@ -70,7 +70,7 @@
 
 /* Begin PBXFileReference section */
 		098D1E47D934992A4D5E2871 /* Pods-Bolts-Swift-Utils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bolts-Swift-Utils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bolts-Swift-Utils/Pods-Bolts-Swift-Utils.debug.xcconfig"; sourceTree = "<group>"; };
-		140A1E1E1D7027520003F2A3 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Model/Config.swift; sourceTree = "<group>"; };
+		140A1E1E1D7027520003F2A3 /* ConfigApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigApp.swift; path = Model/ConfigApp.swift; sourceTree = "<group>"; };
 		140A1E211D7027B00003F2A3 /* NetwokingBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetwokingBase.swift; path = Base/NetwokingBase.swift; sourceTree = "<group>"; };
 		140A1E251D70364E0003F2A3 /* ArabicaUilts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArabicaUilts.swift; path = Utils/ArabicaUilts.swift; sourceTree = "<group>"; };
 		140A1E281D7036FF0003F2A3 /* ConfigLoadTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigLoadTests.swift; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				14D3A37A1D6FEDE5002FF46D /* Weather.swift */,
-				140A1E1E1D7027520003F2A3 /* Config.swift */,
+				140A1E1E1D7027520003F2A3 /* ConfigApp.swift */,
 				144AF0811D7052CB005101FF /* UserConfig.swift */,
 				144AF0831D705484005101FF /* UserToken.swift */,
 				14A1BEBA1D73139F00579807 /* FacebookToken.swift */,
@@ -580,7 +580,7 @@
 				147C84AF1D6EEE2A00CDCC8C /* FacebookUtils.swift in Sources */,
 				140A1E221D7027B00003F2A3 /* NetwokingBase.swift in Sources */,
 				14D3A37B1D6FEDE5002FF46D /* Weather.swift in Sources */,
-				140A1E1F1D7027520003F2A3 /* Config.swift in Sources */,
+				140A1E1F1D7027520003F2A3 /* ConfigApp.swift in Sources */,
 				14E2D9841D702065009A128F /* NetworkViewController.swift in Sources */,
 				1498C49B1D6EEBBE009AC618 /* AppDelegate.swift in Sources */,
 				14A1BEBB1D73139F00579807 /* FacebookToken.swift in Sources */,
@@ -605,7 +605,7 @@
 				14A1BEB91D730F5100579807 /* UIApplication.swift in Sources */,
 				14A1BEB81D730DFF00579807 /* LoadConfigTests.swift in Sources */,
 				14A1BEC21D73528C00579807 /* LoginAndProfileFlowTests.swift in Sources */,
-				140A1E231D7028B70003F2A3 /* Config.swift in Sources */,
+				140A1E231D7028B70003F2A3 /* ConfigApp.swift in Sources */,
 				14D3A37C1D6FF37A002FF46D /* Weather.swift in Sources */,
 				14ECB7ED1D6FE71500A59889 /* NetworkingUtils.swift in Sources */,
 				14A1BEBE1D731B5900579807 /* MockData.swift in Sources */,

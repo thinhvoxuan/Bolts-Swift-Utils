@@ -14,7 +14,7 @@ class ConfigLoadTests: XCTestCase {
     let networking = ArabicaUilts.shareInstance
     override func setUp() {
         super.setUp()
-        EVReflection.setBundleIdentifier(Config)
+        EVReflection.setBundleIdentifier(ConfigApp)
     }
 
     override func tearDown() {
@@ -23,7 +23,7 @@ class ConfigLoadTests: XCTestCase {
 
     func testLoadConfig() {
         let ex = expectationWithDescription("Config Error Reponse")
-        var resultTask: Task<Config>? = nil
+        var resultTask: Task<ConfigApp>? = nil
         networking.fetchConfig().continueWith { task in
             resultTask = task
             ex.fulfill()
@@ -37,14 +37,14 @@ class ConfigLoadTests: XCTestCase {
     }
 
     func testNeedUpdate() {
-        let config = Config()
+        let config = ConfigApp()
         config.ios = "10.0.1"
         let trueResult = config.isNeedUpdate()
         XCTAssertTrue(trueResult, "Must be update if config version is Greater")
     }
 
     func testNoNeedUpdate() {
-        let config = Config()
+        let config = ConfigApp()
         config.ios = "0.0.1"
         let falseResult = config.isNeedUpdate()
         XCTAssertTrue(!falseResult, "Must be update if config version is Greater")

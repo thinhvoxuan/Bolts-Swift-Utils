@@ -10,7 +10,7 @@ import UIKit
 import EVReflection
 import Version
 
-class Config: EVObject {
+class ConfigApp: EVObject {
     var home: MultiLanguages = MultiLanguages()
     var store: MultiLanguages = MultiLanguages()
     var android: String = "0.0.0"

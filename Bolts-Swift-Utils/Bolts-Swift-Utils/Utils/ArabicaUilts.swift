@@ -21,7 +21,7 @@ class ArabicaUilts: NetwokingBase {
         static let profile = ROUTE.ROOT + "/profile"
     }
 
-    func fetchConfig() -> Task<Config> {
+    func fetchConfig() -> Task<ConfigApp> {
         return fetchRequest(ROUTE.config)
             .continueOnSuccessWithTask(continuation: model.parseConfigModel)
     }
@@ -64,7 +64,7 @@ class ArabicaUilts: NetwokingBase {
             "Authorization" : "Bearer \(token.token)",
             "Accept-Language": "vi"
         ]
-        return fetchRequest(ROUTE.profile, header: headers)
+        return fetchRequest(ROUTE.profile, headers: headers)
             .continueOnSuccessWithTask(continuation: model.parseUserInformation)
     }
 }

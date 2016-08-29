@@ -15,7 +15,7 @@ class LoadConfigTests: XCTestCase {
     let networking = ArabicaUilts.shareInstance
     override func setUp() {
         super.setUp()
-        EVReflection.setBundleIdentifier(Config)
+        EVReflection.setBundleIdentifier(ConfigApp)
     }
 
     override func tearDown() {
@@ -24,7 +24,7 @@ class LoadConfigTests: XCTestCase {
 
     func testLoadConfig() {
         let ex = expectationWithDescription("Config Error Reponse")
-        var resultTask: Task<Config>? = nil
+        var resultTask: Task<ConfigApp>? = nil
         networking.fetchConfig().continueWith { task in
             resultTask = task
             ex.fulfill()

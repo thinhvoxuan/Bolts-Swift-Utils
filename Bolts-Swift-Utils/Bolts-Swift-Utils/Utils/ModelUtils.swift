@@ -19,9 +19,9 @@ class ModelUtils {
         return task.task
     }
 
-    func parseConfigModel(anyObject: AnyObject) -> Task<Config> {
-        let task = TaskCompletionSource<Config>()
-        let config = Config(dictionary: (anyObject as? NSDictionary)!)
+    func parseConfigModel(anyObject: AnyObject) -> Task<ConfigApp> {
+        let task = TaskCompletionSource<ConfigApp>()
+        let config = ConfigApp(dictionary: (anyObject as? NSDictionary)!)
         task.set(result: config)
         return task.task
     }

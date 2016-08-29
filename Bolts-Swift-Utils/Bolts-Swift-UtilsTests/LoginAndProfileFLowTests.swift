@@ -15,7 +15,7 @@ class LoginAndProfileFLowTests: XCTestCase {
     var userToken: UserToken?
     override func setUp() {
         super.setUp()
-        EVReflection.setBundleIdentifier(Config)
+        EVReflection.setBundleIdentifier(ConfigApp)
 
         let exp = expectationWithDescription("Register a user")
         let data = MockData.genSignupFullInformation()
@@ -42,6 +42,7 @@ class LoginAndProfileFLowTests: XCTestCase {
             XCTAssertNotNil(userInfor, "Fetch success profile")
             XCTAssertNotNil(userInfor?.name, "Fetch success profile")
             XCTAssertTrue(userInfor?.name.characters.count > 0, "name must greater than 0")
+            XCTAssertTrue(userInfor?.code == 200, "status code must be 200")
         } else {
             XCTFail("Could not load Profile from Register")
         }

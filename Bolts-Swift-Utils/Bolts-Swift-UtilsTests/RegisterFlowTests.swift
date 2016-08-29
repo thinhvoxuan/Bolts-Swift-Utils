@@ -14,7 +14,7 @@ class RegisterFlowTests: XCTestCase {
     let networking = ArabicaUilts.shareInstance
     override func setUp() {
         super.setUp()
-        EVReflection.setBundleIdentifier(Config)
+        EVReflection.setBundleIdentifier(ConfigApp)
     }
 
     override func tearDown() { super.tearDown() }
